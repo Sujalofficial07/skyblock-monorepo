@@ -1,0 +1,6 @@
+name: SkyblockIslands
+version: '1.0.0-SNAPSHOT'
+main: net.skyblock.islands.SkyblockIslands
+api-version: '1.21'
+depend: [SkyblockCore]
+description: Private islands and minions
