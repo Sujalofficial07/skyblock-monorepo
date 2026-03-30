@@ -1,0 +1,6 @@
+name: SkyblockEconomy
+version: '1.0.0-SNAPSHOT'
+main: net.skyblock.economy.SkyblockEconomy
+api-version: '1.21'
+depend: [SkyblockCore]
+description: Coins, bank, auction house, bazaar
