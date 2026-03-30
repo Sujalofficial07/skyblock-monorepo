@@ -1,0 +1,6 @@
+name: SkyblockItems
+version: '1.0.0-SNAPSHOT'
+main: net.skyblock.items.SkyblockItems
+api-version: '1.21'
+depend: [SkyblockCore]
+description: Custom items and NBT system
