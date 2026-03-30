@@ -1,0 +1,6 @@
+name: SkyblockSkills
+version: '1.0.0-SNAPSHOT'
+main: net.skyblock.skills.SkyblockSkills
+api-version: '1.21'
+description: Skills system for SkyBlock
+depend: [SkyblockCore]
