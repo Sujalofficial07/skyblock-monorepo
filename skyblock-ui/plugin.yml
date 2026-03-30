@@ -1,0 +1,6 @@
+name: SkyblockUI
+version: '1.0.0-SNAPSHOT'
+main: net.skyblock.ui.SkyblockUI
+api-version: '1.21'
+depend: [SkyblockCore]
+description: Scoreboard, action bar, GUI menus
