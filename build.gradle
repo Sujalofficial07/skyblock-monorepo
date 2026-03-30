@@ -1,0 +1,36 @@
+plugins {
+    id 'java' apply false
+}
+
+subprojects {
+    apply plugin: 'java'
+    group = 'net.skyblock'
+    version = '1.0.0-SNAPSHOT'
+
+    java {
+        toolchain { languageVersion = JavaLanguageVersion.of(21) }
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    }
+
+    dependencies {
+        compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
+        compileOnly 'org.projectlombok:lombok:1.18.34'
+        annotationProcessor 'org.projectlombok:lombok:1.18.34'
+        implementation 'com.google.code.gson:gson:2.11.0'
+        implementation 'org.xerial:sqlite-jdbc:3.46.0.0'
+        implementation 'com.zaxxer:HikariCP:5.1.0'
+    }
+
+    jar {
+        from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+}
+
+configure(subprojects.findAll { it.name != 'skyblock-core' }) {
+    dependencies { compileOnly project(':skyblock-core') }
+}
