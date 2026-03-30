@@ -1,0 +1,6 @@
+name: SkyblockCombat
+version: '1.0.0-SNAPSHOT'
+main: net.skyblock.combat.SkyblockCombat
+api-version: '1.21'
+depend: [SkyblockCore]
+description: Custom damage system and slayer quests
